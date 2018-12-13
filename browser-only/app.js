@@ -11,7 +11,7 @@ const keyPhrasesUi = document.querySelector("ul");
 btn.addEventListener("click", getAnalytics);
 input.addEventListener("input", clearDisplay);
 
-//Instantiate the getanalytics and UI class
+//Instantiate the getanalytics class passing your API key
 const analytics = new TextAnalytics("3437fd062d7d4de7a729ce2eadfe80d0");
 
 //worker function
@@ -24,6 +24,7 @@ function getAnalytics() {
       }
     ]
   };
+
   const languageData = analytics.detectLanguage(message);
   const sentimentData = analytics.sentimentAnalysis(message);
   const keyPhrasesData = analytics.keyWords(message);
