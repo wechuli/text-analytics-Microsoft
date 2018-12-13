@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: beige;
+        font-size: 22px;
+      }
+      .boldy{
+          font-weight:bold;
+      }
+    </style
     <title>TextAnalytics API</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container text-center">
+        Awesome App to Analyse Language, Sentiment and Key Phrases
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 ">
+          <h3 class="text-center mt-2"><b>Enter Text Below</b></h3>
+          <div class="form-group">
+            <label for="comment">Your Text:</label>
+            <textarea
+              id="input"
+              class="form-control"
+              rows="5"
+              id="comment"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mx-auto">Analyze</button>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <h3 class="text-center mt-2"><b>Text Analytics</b></h3>
+          <br />
+
+          <div class="card border-primary">
+            <div class="card-header">Your Stats</div>
+            <div id="analyticsContent" class="card-body">
+              <div class="language"></div>
+              <div class="sentiment"></div>
+              <ul class="list-group">
+                  
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="textAnalyticsLib.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
