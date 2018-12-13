@@ -9,6 +9,7 @@ const keyPhrasesUi = document.querySelector("ul");
 
 //Attach event listeners to them
 btn.addEventListener("click", getAnalytics);
+input.addEventListener("input", clearDisplay);
 
 //Instantiate the getanalytics and UI class
 const analytics = new TextAnalytics("3437fd062d7d4de7a729ce2eadfe80d0");
@@ -29,13 +30,13 @@ function getAnalytics() {
 
   keyPhrasesData
     .then(data => {
-      
+      keyPhrasesUi.innerHTML = "";
       const phrases = data.documents[0].keyPhrases;
       console.log(phrases.length);
-      if(!phrases.length==0){
-        let listheading = document.createElement('p');
+      if (!phrases.length == 0) {
+        let listheading = document.createElement("p");
         listheading.className = "boldy";
-        listheading.textContent="Key Words and Phrases: ";
+        listheading.textContent = "Key Words and Phrases: ";
         keyPhrasesUi.append(listheading);
       }
 
@@ -87,4 +88,9 @@ function getAnalytics() {
     .catch(err =>
       console.log("An error occured while fetching the language: ", err)
     );
+}
+function clearDisplay() {
+  languageUi.innerHTML = "";
+  sentimentUi.innerHTML = "";
+  keyPhrasesUi.innerHTML = "";
 }
