@@ -1,2 +1,2 @@
 # text-analytics-Microsoft
-text analytics app using microsoft cognitive services text analytics platform
+text analytics app using microsoft cognitive services text analytics platform. The browser only(for now) can detect the language of entered text, the sentiment(either positive or negative) and also the key words and phrases of your text. Just run the html file named index in the browser only folder to see how it works. You should alternatively get your own key from Microsoft - https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/
